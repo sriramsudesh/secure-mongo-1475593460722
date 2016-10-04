@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IBM Bluemix Sample</title>
+</head>
+<body>
+  <h2>Add quotes and retreive quotes from on premise Mongodb using Secure Gateway <h2>
+
+ 
+  <form action="/quotes" method="POST">
+  	Enter the author of the quote:<br>
+    <input type="text" placeholder="name" name="name">
+    Enter the actual quote :<br>
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+
+ <ul class="quotes">
+ 
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+
+
+
+</body>
+</html>
